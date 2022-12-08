@@ -1,6 +1,6 @@
 {
   "name": "@hodico/ckeditor5-build-hodi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hodi's custom build of CKEditor.",
   "keywords": [
     "ckeditor5-build",
