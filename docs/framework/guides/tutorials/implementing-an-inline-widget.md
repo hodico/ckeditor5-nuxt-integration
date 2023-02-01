@@ -314,6 +314,7 @@ export default class PlaceholderEditing extends Plugin {
 	}
 
 	_defineSchema() {
+		// Previously registered schema.
 		// ...
 	}
 
@@ -452,10 +453,12 @@ export default class PlaceholderEditing extends Plugin {
 	}
 
 	_defineSchema() {
+		// Previously registered schema.
 		// ...
 	}
 
 	_defineConverters() {
+		// Previously defined converters.
 		// ...
 	}
 }
@@ -495,7 +498,7 @@ foo<span class="placeholder">{name}</span>bar
 
 You could say that in the view there is "more" text than in the model. This means that some positions in the view cannot automatically map to positions in the model. Namely &mdash; those are positions inside the `<span>` element.
 
-Fortunately, CKEditor 5 {@link module:engine/conversion/mapper~Mapper#viewToModelPosition allows customizing the mapping logic}. Also, since mapping to an empty model element is a pretty common scenario, there is a ready-to-use utility {@link module:widget/utils~viewToModelPositionOutsideModelElement `viewToModelPositionOutsideModelElement()`} that you can use here like that:
+Fortunately, CKEditor 5 {@link module:engine/conversion/mapper~Mapper#event:viewToModelPosition allows customizing the mapping logic}. Also, since mapping to an empty model element is a pretty common scenario, there is a ready-to-use utility {@link module:widget/utils~viewToModelPositionOutsideModelElement `viewToModelPositionOutsideModelElement()`} that you can use here like that:
 
 ```js
 // placeholder/placeholderediting.js
@@ -534,10 +537,12 @@ export default class PlaceholderEditing extends Plugin {
 	}
 
 	_defineSchema() {
+		// Previously registered schema.
 		// ...
 	}
 
 	_defineConverters() {
+		// Previously defined converters.
 		// ...
 	}
 }
@@ -646,9 +651,11 @@ ClassicEditor
 		toolbar: [ 'heading', 'bold', 'italic', 'numberedList', 'bulletedList', '|', 'placeholder' ]
 	} )
 	.then( editor => {
+		// This code runs after the editor initialization.
 		// ...
 	} )
 	.catch( error => {
+		// Error handling if something goes wrong during initialization.
 		// ...
 	} );
 ```
@@ -658,7 +665,8 @@ To make this plugin extensible, placeholder types will be read from the editor c
 The first step is to define the placeholder configuration in the editing plugin:
 
 ```js
-// ... imports
+// Previously imported packages.
+// ...
 
 export default class PlaceholderEditing extends Plugin {
 	static get requires() {
@@ -684,10 +692,12 @@ export default class PlaceholderEditing extends Plugin {
 	}
 
 	_defineConverters() {
+		// Previously defined converters.
 		// ...
 	}
 
 	_defineSchema() {
+		// Previously registered schema.
 		// ...
 	}
 }
@@ -705,6 +715,7 @@ export default class PlaceholderUI extends Plugin {
 		const placeholderNames = editor.config.get( 'placeholderConfig.types' );            // CHANGED
 
 		editor.ui.componentFactory.add( 'placeholder', locale => {
+			// Previously registered dropdown among UI components.
 			// ...
 		} );
 	}
@@ -714,7 +725,8 @@ export default class PlaceholderUI extends Plugin {
 The plugin is now ready to accept the configuration. Check how this works by adding the `placeholderConfig` configuration in the editor's `create()` method:
 
 ```js
-// ... imports
+// Previously imported packages.
+// ...
 
 ClassicEditor
 	.create( document.querySelector( '#editor' ), {
@@ -724,6 +736,7 @@ ClassicEditor
 			types: [ 'date', 'color', 'first name', 'surname' ]                             // ADDED
 		}
 	} )
+	// Promise handling.
 	// ...
 ```
 
