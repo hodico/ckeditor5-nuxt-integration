@@ -11,6 +11,7 @@ import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapte
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKBox from '@ckeditor/ckeditor5-ckbox/src/ckbox';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
@@ -57,6 +58,7 @@ ClassicEditor.builtinPlugins = [
 	Indent,
 	Link,
 	List,
+	Font,
 	Mention,
 	MediaEmbed,
 	Paragraph,
@@ -75,6 +77,11 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
+			'|',
+			'fontSize',
+			'fontColor',
+			'fontBackgroundColor',
+			'|',
 			'link',
 			'bulletedList',
 			'numberedList',

@@ -1,6 +1,6 @@
 {
   "name": "@hodico/ckeditor5-build-hodi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Hodi's custom build of CKEditor.",
   "keywords": [
     "ckeditor5-build",
@@ -37,6 +37,7 @@
     "@ckeditor/ckeditor5-easy-image": "^35.3.2",
     "@ckeditor/ckeditor5-editor-classic": "^35.3.2",
     "@ckeditor/ckeditor5-essentials": "^35.3.2",
+    "@ckeditor/ckeditor5-font": "^36.0.0",
     "@ckeditor/ckeditor5-heading": "^35.3.2",
     "@ckeditor/ckeditor5-image": "^35.3.2",
     "@ckeditor/ckeditor5-indent": "^35.3.2",
